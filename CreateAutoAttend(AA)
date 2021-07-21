@@ -1,0 +1,12 @@
+
+
+
+New-CsOnlineApplicationInstance -UserPrincipalName POC-Helpdesk@kromannreumert.onmicrosoft.com -DisplayName “POC-Helpdesk” -ApplicationId “ce933385-9390-45d1-9512-c8d228074e07” -Verbose
+
+#set Assing linces
+# 440eaaa8-b3e0-484b-a8be-62870b9ba70a = Microsoft 365 Phone System – Virtual User licenses
+# How To Buy: https://docs.microsoft.com/en-us/microsoftteams/teams-add-on-licensing/virtual-user#how-to-buy-microsoft-365-phone-system--virtual-user-licenses
+
+
+
+Set-MsolUserLicense -UserPrincipalName "<Account>" -AddLicenses "440eaaa8-b3e0-484b-a8be-62870b9ba70a"
