@@ -1,4 +1,0 @@
-$UserEmail = ""
-$UserPhoneNr = ""
-
-Set-CsUser -Identity $UserEmail -OnPremLineURI $UserPhoneNr -EnterpriseVoiceEnabled $true -HostedVoiceMail $true -Verbose
