@@ -8,4 +8,4 @@
 $UserEmail = ""
 $UserPhoneNr = ""
 
-Set-CsUser -Identity $UserEmail -OnPremLineURI $UserPhoneNr -EnterpriseVoiceEnabled $true -HostedVoiceMail $true -Verbose
+Set-CsUser -Identity $UserEmail -OnPremLineURI tel:$UserPhoneNr -EnterpriseVoiceEnabled $true -HostedVoiceMail $true -Verbose
