@@ -1,0 +1,25 @@
+#The following is a work in progress and the language is a combination of english and danish
+#If you have any question feel free to ask me
+
+InterpretedUserType
+
+GOAL FOR NORMAL USER:
+The user should be in on of the following 'types':
+* HybridOnlineTeamsOnlyUser
+* PureOnlineTeamsOnlyUser
+* AADConnectEnabledOnlineTeamsOnlyUser
+
+GOAL FOR APPLICATION:
+The application should in on of the following 'types:
+* PureOnlineApplicationInstance
+
+
+
+
+HybridOnlineActiveDirectoryDisabledUser
+- Slet gamle SFB Attributer
+- Skifter derefter til AADConnectEnabledOnlineActiveDirectoryDisabledUserNeedsPublishingToAAD og ender til sidst i AADConnectEnabledOnlineActiveDirectoryDisabledUser
+
+HybridOnlineActiveDirectoryDisabledUser
+- Slet gamle SFB attributter
+- Skifter herefter til 
