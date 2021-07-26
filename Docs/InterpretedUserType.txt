@@ -14,12 +14,21 @@ The application should in on of the following 'types:
 * PureOnlineApplicationInstance
 
 
+Fratrådte brugere:
 
-
+Exchange Plan 2 + Sync til AD
 HybridOnlineActiveDirectoryDisabledUser
 - Slet gamle SFB Attributer
 - Skifter derefter til AADConnectEnabledOnlineActiveDirectoryDisabledUserNeedsPublishingToAAD og ender til sidst i AADConnectEnabledOnlineActiveDirectoryDisabledUser
 
+Exchange Plan 2 + Sync til AAD
 HybridOnlineActiveDirectoryDisabledUser
 - Slet gamle SFB attributter
-- Skifter herefter til 
+- Skifter herefter til AADConnectEnabledOnlineActiveDirectoryDisabledUserNeedsProvisioningToAD og ender til sidst i AADConnectEnabledOnlineActiveDirectoryDisabledUser
+
+#Fordelen ved at slette de gamle attributter på en fratrådt medarbejdere der ikke slettes er vedkommende vil være nemmere og oprette i Teams igen når/hvis de kommer retur
+
+
+Ingen licens + Ingen sync
+AADConnectDisabledOnlineActiveDirectoryDisabledUserPendingDeletionFromAD
+- Slet gamle SFB Attributter
