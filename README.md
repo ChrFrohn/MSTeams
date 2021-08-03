@@ -10,5 +10,6 @@
 * Create Call Que (CQ)
 * [Create Auto Attend (AA)](https://github.com/vFrohn/MSTeams/blob/main/CreateAutoAttendant(AA).ps1)
 * PowerShell ISE logon addon
+* [Connect To Teams as a Service Principal](https://github.com/vFrohn/MSTeams/blob/main/ConnectToTeams-ServicePrincipal.ps1)
 
 
