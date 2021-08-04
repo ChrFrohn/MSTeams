@@ -1,3 +1,5 @@
+# THIS IS STILL WORK IN PROGRESS !!!!!
+
 # Connect to Teams using Service principal (App reg)
 # This should be used in automation jobs related to Microsoft Teams administration
 # Remember to add API permissions to the Service Principal
