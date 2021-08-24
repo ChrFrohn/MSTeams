@@ -55,7 +55,7 @@ Set-MailboxFolderPermission -Identity $RoomMail -User default -AccessRights Publ
 Start-Sleep 500
 
 ##########################################################################################################################################################################################################
-#
+
 #Teams configuration
 #Get reg. pool
 $GetRegPool = Get-CsOnlineUser $RoomMail | Select-Object RegistrarPool
