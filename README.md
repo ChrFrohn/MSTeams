@@ -12,6 +12,8 @@
 * PowerShell ISE logon addon
 * [Connect To Teams as a Service Principal](https://github.com/vFrohn/MSTeams/blob/main/ConnectToTeams-ServicePrincipal.ps1)
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## [InterpretedUserType](https://github.com/vFrohn/MSTeams/blob/main/InterpretedUserType.md)
 
 This a collection of all the different InterpretedUserType values i have come acress in my work with MS Teams - Hopefully this 'document' can help some to resolve some erros
