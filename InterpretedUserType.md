@@ -17,3 +17,12 @@
 | HybridOnpremActiveDirectoryDisabledUser | User is disable in on-prem AD | Enable the user in on-prem AD and then do a sync to AAD |
 | HybridOnpremTeamsOnlyUserNotLicensedForService | User is disable in on-prem AD and does not have a licens | Enable the user in on-prem AD and then do a sync to AAD and Assign a licens (E3 & E5 fx) |
 | HybridOnpremTeamsOnlyUserWithMCOValidationError | User has an error realted to MCOValidation attribute | "Run Get-CsOnlineUser "Username" | select-object MCOValidationError | Format-List" to determined what is wrong |
+
+### PureOnline* 
+- Typical for users that are homed in Teams online - No attachments to on-prem identity
+
+
+| InterpretedUserType | Description | Solution / What you should/can do | 
+| ------------------- | ----------- | --------------------------------- | 
+| PureOnlineApplicationInstance | This is an Teams applications (AA & CQ) | The 'SA' is ready to be processed, you can assigne a phonenumber and added to a AA or CQ |
+| PureOnlineTeamsOnlyUser | User is homed in the cloud | Nothing, the user is ready for what you wish |
