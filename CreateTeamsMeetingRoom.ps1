@@ -11,7 +11,7 @@ Connect-MsolService
 #Used in Teams
 $PhoneNumber = "" #The number to be used in the conference room (remember country code fx. +45)
 $TeamsIpPhonePolicy = "" #The policy to be used in the conference room (Get-CsTeamsIPPhonePolicy)
-$CallingPolicy = "" #The calling policy to be used by the conference phone user
+$CallingPolicy = "" #The calling policy to be used by the conference phone user (Get-CsTeamsCallingPolicy | Select-Object Identity)
 
 #Used in Exchange / Msol
 $RoomMail = "" #RoomName@yourdomain.it
