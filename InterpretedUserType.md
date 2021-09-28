@@ -17,6 +17,7 @@
 | HybridOnpremActiveDirectoryDisabledUser | User is disable in on-prem AD | Enable the user in on-prem AD and then do a sync to AAD |
 | HybridOnpremTeamsOnlyUserNotLicensedForService | User is disable in on-prem AD and does not have a licens | Enable the user in on-prem AD and then do a sync to AAD and Assign a licens (E3 & E5 fx) |
 | HybridOnpremTeamsOnlyUserWithMCOValidationError | User has an error realted to MCOValidation attribute | "Run Get-CsOnlineUser "Username" | select-object MCOValidationError | Format-List" to determined what is wrong |
+| HybridOnlineEnabledUserWithSfBAndTeamsLicense | | |
 
 ### PureOnline* 
 - Typical for users that are homed in Teams online - No attachments to on-prem identity
