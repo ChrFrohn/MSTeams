@@ -7,3 +7,8 @@ New-CsUserCallingDelegate -Identity UserName@domain.com -Delegate CorporateOffic
 Set-CsUserCallingDelegate -Identity UserName@domain.com -Delegate CorporateOfficer@domain.com -MakeCalls $true
 
 Remove-CsUserCallingDelegate -Identity UserName@domain.com -Delegate CorporateOfficer@domain.com
+
+Set-CsUserCallingSettings -Identity UserName@domain.com -IsUnansweredEnabled $true -UnansweredTargetType Voicemail -UnansweredDelay 00:00:20
+
+Set-CsUserCallingSettings -Identity UserName@domain.com -IsUnansweredEnabled $false
+Set-CsUserCallingSettings -Identity UserName@domain.com -IsForwardingEnabled $true -ForwardingType Immediate -ForwardingTargetType Voicemail
