@@ -12,6 +12,7 @@
 * PowerShell ISE logon addon
 * [Connect To Teams as a Service Principal](https://github.com/vFrohn/MSTeams/blob/main/ConnectToTeams-ServicePrincipal.ps1)
 * [Calling forwarding](https://github.com/vFrohn/MSTeams/blob/main/Callforwarding.Ps1)
+* [Set new date on holiday](https://github.com/vFrohn/MSTeams/blob/main/SetNewDateOnHolidayInTeams.ps1)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
