@@ -33,7 +33,7 @@
 | PureOnlineTeamsOnlyUserNotLicensedForServicePendingDeletionFromAD | User needs a licens and is a process of being deleted | If licens is assigned, the user could be ready for Teams direct routing |
 
 ### AADConnect*
-- Typical for 
+- Typical for users Typical for users that are homed in Teams online, but the user identity is attached to on-prem AD 
 
 | InterpretedUserType | Description | Solution / What you should/can do | 
 | ------------------- | ----------- | --------------------------------- | 
