@@ -34,3 +34,14 @@
 
 ### AADConnect*
 - Typical for 
+
+| InterpretedUserType | Description | Solution / What you should/can do | 
+| ------------------- | ----------- | --------------------------------- | 
+| AADConnectDisabledOnlineActiveDirectoryDisabledUserPendingDeletionFromAD | User might be deleted in AAD | Enable user in AD and sync the user to AAD | 
+| AADConnectDisabledOnlineTeamsOnlyUserNotLicensedForServicePendingDeletionFromAD | User might be deleted in AAD | Enable user in AD and sync the user to AAD and then Assign a Teams licens to the user (E3 or E5 fx.) |
+| AADConnectDisabledOnlineTeamsOnlyUserPendingDeletionFromAD | User might be deleted in AAD | Enable user in AD and sync the user to AAD |
+| AADConnectEnabledOnlineActiveDirectoryDisabledUser | | Enable user in AD and sync the user to AAD | 
+| AADConnectEnabledOnlineActiveDirectoryDisabledUserPendingAttributeRemovalFromAD | Enable the user in on-prem AD, then sync to AAD  | You may need to remove old SFB attribtues in AD staring with msRTCSIP-* |
+| AADConnectEnabledOnlineTeamsOnlyUser | | User is ready for Teams direct routing |
+| AADConnectEnabledOnlineTeamsOnlyUserNotLicensedForService | User needs a licens | Assign a Teams licens to the user (E3 or E5 fx.) |
+| AADConnectEnabledOnlineTeamsOnlyUserNotLicensedForServicePendingAttributeRemovalFromAD | | Assign a Teams licens to the user (E3 or E5 fx.) - SFB attributes in on-prem AD needs to be checked |
