@@ -27,3 +27,10 @@
 | ------------------- | ----------- | --------------------------------- | 
 | PureOnlineApplicationInstance | This is an Teams applications (AA & CQ) | The 'SA' is ready to be processed, you can assigne a phonenumber and added to a AA or CQ |
 | PureOnlineTeamsOnlyUser | User is homed in the cloud | Nothing, the user is ready for what you wish |
+| PureOnlineActiveDirectoryDisabledUser | User is disabled | Enable the user in Azure AD |
+| PureOnlineApplicationInstancePendingDeletionFromAD | Deleted user | This is a deleted application - Chose another user |
+| PureOnlineTeamsOnlyUserNotLicensedForService | User needs a licens | Assign a Teams licens to the user (E3 or E5 fx.) |
+| PureOnlineTeamsOnlyUserNotLicensedForServicePendingDeletionFromAD | User needs a licens and is a process of being deleted | If licens is assigned, the user could be ready for Teams direct routing |
+
+### AADConnect*
+- Typical for 
