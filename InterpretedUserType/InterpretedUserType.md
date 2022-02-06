@@ -45,3 +45,11 @@
 | AADConnectEnabledOnlineTeamsOnlyUser | | User is ready for Teams direct routing |
 | AADConnectEnabledOnlineTeamsOnlyUserNotLicensedForService | User needs a licens | Assign a Teams licens to the user (E3 or E5 fx.) |
 | AADConnectEnabledOnlineTeamsOnlyUserNotLicensedForServicePendingAttributeRemovalFromAD | | Assign a Teams licens to the user (E3 or E5 fx.) - SFB attributes in on-prem AD needs to be checked |
+
+### DirsyncEnabled*
+- This a value that only are visiable in Teams Admin Center in the user overview - You should trust the values from PowerShell
+
+| InterpretedUserType | Description | Solution / What you should/can do | 
+| ------------------- | ----------- | --------------------------------- | 
+| DirsyncenabledOnlineTeamsOnlyUser | See "HybridOnlineTeamsOnlyUser"  | You don’t need to to anything |
+
