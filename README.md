@@ -16,7 +16,7 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## [InterpretedUserType](https://github.com/ChrFrohn/MSTeams/blob/main/InterpretedUserType.md)
+## [InterpretedUserType](https://github.com/ChrFrohn/MSTeams/tree/main/InterpretedUserType)
 
 This a collection of all the different InterpretedUserType values i have come acress in my work with MS Teams - Hopefully this collection can help others resolve some erros in there own environment.
 
