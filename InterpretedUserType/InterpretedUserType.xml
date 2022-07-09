@@ -31,11 +31,17 @@
       <description>User is NOT ready for Teams direct routing</description>
       <Solution>Enable the user in on-prem AD and Assign a Teams licens to the user (E3 or E5 fx.)</Solution>
    </Type>
-   <Type id="HybridOnpremTeamsOnlyUserWithMCOValidationError">
+   <Type id="HybridOnlineMisconfiguredTeamsOnlyUser">
       <Action>Stop</Action>
       <description>User is NOT ready for Teams direct routing</description>
       <Solution>Not clear - Do a Get-csonlineuser and investigate</Solution> <!--This might needs ajustment-->
    </Type>
+   </Type>
+   <Type id="HybridOnlineActiveDirectoryDisabledUserPendingAttributeRemovalFromAD">
+      <Action>Stop</Action>
+      <description>User is NOT ready for Teams direct routing</description>
+      <Solution>Enable the user in on-prem AD, then sync to AAD - You may need to remove old SFB attribtues in AD staring with msRTCSIP-*</Solution>
+   </Type> 
 <!--PUREONLINE*-->
    <Type id="PureOnlineActiveDirectoryDisabledUser">
       <Action>Stop</Action>
@@ -107,5 +113,21 @@
       <Action>Stop</Action>
       <description>User is NOT ready for Teams direct routing</description>
       <Solution>Assign a Teams licens to the user (E3 or E5 fx.) - SFB attributes in on-prem AD needs to be checked</Solution>
-   </Type>    
+   </Type>
+<!--DirSyncEnabled*-->
+   <Type id="DirSyncEnabledOnlineTeamsOnlyUser">
+      <Action>Proceed</Action>
+      <description>User is ready for Teams direct routing</description>
+      <Solution></Solution>
+   </Type>
+   <Type id="DirSyncEnabledOnlineTeamsOnlyUserWithNoService">
+      <Action>Stop</Action>
+      <description>User is NOT ready for Teams direct routing</description>
+      <Solution>Assign a Teams licens to the user (E3 or E5 fx.)</Solution>
+   </Type>
+   <Type id="DirSyncEnabledOnlineActiveDirectoryDisabledUser">
+      <Action>Stop</Action>
+      <description>User is NOT ready for Teams direct routing</description>
+      <Solution>Enable user in AD and sync the user to AAD</Solution>
+   </Type>
 </InterpretedUser>
