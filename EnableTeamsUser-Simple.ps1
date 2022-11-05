@@ -5,7 +5,7 @@
 #
 # ! THIS WILL ONLY WORK WITH A NEWLY CREATED USER IN ON-PREM AD or AAD !
 
-$UserEmail = ""
-$UserPhoneNr = ""
+$UserEmail = "" #user@domain.dk
+$UserPhoneNr = "" #Fx. +4511223344
 
-Set-CsUser -Identity $UserEmail -OnPremLineURI tel:$UserPhoneNr -EnterpriseVoiceEnabled $true -HostedVoiceMail $true -Verbose
+Set-CsPhoneNumberAssignment -Identity $UserEmail -PhoneNumber $UserPhoneNr -PhoneNumberType DirectRouting 
