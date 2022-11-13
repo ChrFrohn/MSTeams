@@ -1,16 +1,38 @@
+#The Azure App reg. requries the following permissions:
+#
+# * Skype for Business administrator role
+# 
+# Graph API permissions
+#
+# * User.Read.All
+# * Group.ReadWrite.All
+# * AppCatalog.ReadWrite.All
+# * TeamSettings.ReadWrite.All
+# * Channel.Delete.All
+# * ChannelSettings.ReadWrite.All
+# * ChannelMember.ReadWrite.All
+#
 
-$tenantid = ""
-$clientid = ""
-$clientsecret = ""
-$username = ""
-$password = ""
+$ClientSecret   = ""
+$ApplicationID = ""
+$TenantID = ""
 
-$uri = "https://login.microsoftonline.com/{0}/oauth2/v2.0/token" -f $tenantid
-$body = "client_id={0}&scope=https://graph.microsoft.com/.default&username={1}&password={2}&grant_type=password&client_secret={3}" -f $clientid, $username, [System.Net.WebUtility]::UrlEncode($password), [System.Net.WebUtility]::UrlEncode($clientsecret)
-$graphtoken = Invoke-RestMethod $uri -Body $body -Method Post -ContentType "application/x-www-form-urlencoded" -ErrorAction SilentlyContinue | Select-object -ExpandProperty access_token
+$graphtokenBody = @{   
+   Grant_Type    = "client_credentials"   
+   Scope         = "https://graph.microsoft.com/.default"   
+   Client_Id     = $ApplicationID   
+   Client_Secret = $ClientSecret   
+}  
 
-$uri = "https://login.microsoftonline.com/{0}/oauth2/v2.0/token" -f $tenantid
-$body = "client_id={0}&scope=48ac35b8-9aa8-4d74-927d-1f4a14a0b239/.default&username={1}&password={2}&grant_type=password&client_secret={3}" -f $clientid, $username, [System.Net.WebUtility]::UrlEncode($password), [System.Net.WebUtility]::UrlEncode($clientsecret)
-$teamstoken = Invoke-RestMethod $uri -Body $body -Method Post -ContentType "application/x-www-form-urlencoded" -ErrorAction SilentlyContinue | Select-object -ExpandProperty access_token
+$graphToken = Invoke-RestMethod -Uri "https://login.microsoftonline.com/$TenantID/oauth2/v2.0/token" -Method POST -Body $graphtokenBody | Select-Object -ExpandProperty Access_Token 
 
-Connect-MicrosoftTeams -AccessTokens @($graphtoken, $teamstoken) -Verbose
+$teamstokenBody = @{   
+   Grant_Type    = "client_credentials"   
+   Scope         = "48ac35b8-9aa8-4d74-927d-1f4a14a0b239/.default"   
+   Client_Id     = $ApplicationID   
+   Client_Secret = $ClientSecret 
+} 
+
+$teamsToken = Invoke-RestMethod -Uri "https://login.microsoftonline.com/$TenantID/oauth2/v2.0/token" -Method POST -Body $teamstokenBody | Select-Object -ExpandProperty Access_Token 
+
+Connect-MicrosoftTeams -AccessTokens @("$graphToken", "$teamsToken")
